@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <style type="text/css">
+      body {
+        color: #000000;
+        background-color: #ffffff;
+        font-family: arial, verdana, sans-serif;
+        font-size: 12pt;
+        background-image: url("bg1.jpg");
+      }
+
+      fieldset {
+        font-size: 12px;
+        padding: 10px;
+        border: 1px solid rgb(black);
+        width: 400px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      label:hover {
+        cursor: hand;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br />
+    <fieldset>
+      <div align="center">
+        <div><h1>Sign up</h1></div>
+        <div>
+          <form
+            action="{{url_for('registration')}}"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div>{{ message }}</div>
+            <br /><br />
+            <label>User ID : </label
+            ><input
+              id="usn"
+              name="usn"
+              type="text"
+              placeholder="User Name"
+              autocomplete="off"
+            />
+            <br /><br />
+            <label>Email : </label
+            ><input
+              id="em"
+              name="em"
+              type="text"
+              placeholder="Email"
+              autocomplete="off"
+            />
+            <br /><br />
+            <label>Password : </label
+            ><input
+              id="pwd"
+              name="pwd"
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+            />
+            <br /><br />
+            <label>First Name : </label
+            ><input
+              id="fn"
+              name="fn"
+              type="text"
+              placeholder="First Name"
+              autocomplete="off"
+            />
+            <br /><br />
+            <label>Last Name : </label
+            ><input
+              id="ln"
+              name="ln"
+              type="text"
+              placeholder="Last Name"
+              autocomplete="off"
+            />
+            <br /><br />
+            <label>Upload Document </label
+            ><input type="file" id="textfile" name="textfile" /><br /><br />
+            <button
+              id="submit"
+              name="submit"
+              style="
+                font-size: 10pt;
+                color: white;
+                background-color: green;
+                border: 2px solid #336600;
+                padding: 9px;
+              "
+            >
+              confirm
+            </button>
+          </form>
+        </div>
+        <p>
+          Already a User? click here to
+          <a href="{{url_for('login')}}">Sign in</a>
+        </p>
+      </div>
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/html"
+  xmlns="http://www.w3.org/1999/html"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <title>Login</title>
+    <style type="text/css">
+      body {
+        color: #000000;
+        background-color: #ffffff;
+        font-family: arial, verdana, sans-serif;
+        font-size: 12pt;
+        background-image: url("bg1.jpg");
+      }
+      input[type="text"] {
+        background: transparent;
+        border: none;
+      }
+      input[type="password"] {
+        background: transparent;
+        border: none;
+      }
+
+      fieldset {
+        font-size: 12px;
+        padding: 10px;
+        border: 1px solid rgb(black);
+        width: 250px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      label:hover {
+        cursor: hand;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <div align="center">
+        <div>
+          <h1><legend>Sign in</legend></h1>
+        </div>
+        <div>
+          <form action="{{url_for('login')}}" method="POST">
+            <div>{{ message }}</div>
+            <br />
+            <br /><input
+              id="usn"
+              name="usn"
+              type="text"
+              placeholder="User Name"
+              autocomplete="off"
+            />
+            <br />
+            <br /><input
+              id="pwd"
+              name="pwd"
+              type="password"
+              placeholder="Password"
+              autocomplete="off"
+            />
+            <br /><br />
+            <button
+              id="submit"
+              name="submit"
+              style="
+                font-size: 10pt;
+                color: white;
+                background-color: green;
+                border: 2px solid #336600;
+                padding: 9px;
+              "
+            >
+              submit
+            </button>
+          </form>
+        </div>
+        <p>
+          Not a User? Register <a href="{{url_for('registration')}}">here</a>
+        </p>
+      </div>
+    </fieldset>
+  </body>
+</html>
